@@ -187,12 +187,13 @@ body {
 }
 .notification-message-profile-container {
   width: 30%;
+  min-width: 290px;
   height: 64px;
   background-color: var(--white);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 1%;
   border-radius: 100px;
 }
 
