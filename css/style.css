@@ -234,7 +234,8 @@ body {
 
 .overview-container{
   width: 717px;
-  height: 430px;
+  height: 450px;
+  max-height: 4;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -682,6 +683,17 @@ body {
 
 
 /* ==== resposive design ===== */
+@media screen and (max-width:1025px) {
+  .sidebar{
+    width: 200px;
+  }
+  .search-container, .overview-container, .analytics-bar-container{
+    width: 500px;
+  }
+  .notification-message-profile-container, .saving-plan-wrapper, .recent-transaction-container{
+    width: 250px;
+  }
+}
 
 @media screen and (max-width:1025px) {
 .wrap{
@@ -704,11 +716,16 @@ body {
 
 }
 @media  screen and (max-width:400px) {
+
 .sidebar{
   display: none;
 }
 .main-section{
   width: 100%;
+}
+.search-container{
+  margin-top: 40px;
+  padding: 2px;
 }
 .notification-message-profile-container{
   width: 100%;
@@ -716,6 +733,10 @@ body {
   padding: 0 10px;
   top: 0;
   z-index: 10;
+}
+.overview-container, .saving-plan-wrapper, .analytics-bar-container, .recent-transaction-container{
+  width: 100%;
+  height: fit-content;
 }
 .analytics-bar-container{
   width: 100%;
