@@ -135,7 +135,7 @@ body {
 
 /* ==== maim section ===== */
 .main-section {
-  max-width: calc(100% - 300px);
+  width: calc(100% - 300px);
   overflow-x: hidden;
 }
 
@@ -182,6 +182,7 @@ body {
   left: 15px;
 }
 .notification-message-profile-container {
+  min-width: 350px;
   width: 350px;
   height: 64px;
   background-color: var(--white);
@@ -301,6 +302,7 @@ body {
 .description{
   width: 100%;
   display: flex;
+  gap: 4;
   align-items: center;
 }
 .description p{
@@ -309,6 +311,7 @@ body {
   line-height: 100%;
   letter-spacing: 0;
   color: var(--primary);
+  text-wrap: nowrap;
 }
 .wallet{
   height: 48px;
@@ -596,8 +599,6 @@ body {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-
-
 }
 .analytics-labels-wrapper :nth-child(1) .dot{
   background-color: var(--primary);
@@ -673,4 +674,89 @@ body {
   line-height: 100%;
   letter-spacing: -1;
   color: var(--tertiory);
+}
+
+.menu{
+  display: none;
+}
+
+
+/* ==== resposive design ===== */
+
+@media screen and (max-width:1025px) {
+.wrap{
+  flex-wrap: wrap;
+}
+.overview-container{
+  width: 100%;
+}
+.saving-plan-wrapper, .saving-plan-container {
+  margin-top: 32px;
+  width: 100%;
+}
+.recent-transaction-container , .recent-transaction-wrapper{
+  width: 100%;
+  margin-top: 32px;
+}
+.recent-transaction-item{
+  width: 100%;
+}
+
+}
+@media  screen and (max-width:400px) {
+.sidebar{
+  display: none;
+}
+.main-section{
+  width: 100%;
+}
+.notification-message-profile-container{
+  width: 100%;
+  position: fixed;
+  padding: 0 10px;
+  top: 0;
+  z-index: 10;
+}
+.analytics-bar-container{
+  width: 100%;
+}
+.overview-items-wrapper{
+  flex-wrap: wrap;
+}
+.overview-item-box{
+  width: 100%;
+}
+.menu{
+  display: block;
+  padding: 12px;
+}
+
+#menu{
+  float: right;
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 1px 2px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+}
+.active-menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 1024px;
+  background-color: var(--white);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease-in;
+  z-index: 100;
+}
 }

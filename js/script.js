@@ -61,3 +61,13 @@ function createChart() {
 }
 
 createChart();
+
+
+//// function to toggele menu
+const menu = document.getElementById("menu")
+const sidebar = document.getElementById("sidebar")
+menu.addEventListener("click", () => {
+  console.log(menu, sidebar)
+  sidebar.classList.toggle("sidebar")
+  sidebar.classList.toggle("active-menu")
+})
