@@ -193,18 +193,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1%;
+  gap: 10px;
   border-radius: 100px;
 }
 
 .top-main-icon{
   width: 66px;
   height: 48px;
+  border-radius: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   border:1px solid var(--grey);
-  border-radius: 100px;
   cursor: pointer;
   padding: 12px;
 }
@@ -270,6 +270,7 @@ body {
 }
 .overview-item-box{
   width:48%;
+  min-width: 48%;
   height: 165px;
   border-radius: 14px;
   padding: 20px;
@@ -300,6 +301,7 @@ body {
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0;
+  text-wrap: nowrap;
 }
 .overview-item-desc :nth-child(1){
   color: var(--white);
@@ -316,6 +318,7 @@ body {
   line-height: 100%;
   letter-spacing: 0;
   color: var(--primary);
+ 
 }
 .wallet{
   height: 48px;
@@ -645,7 +648,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  overflow-y: auto;
 }
 .recent-transaction-item{
   width: 100%;
@@ -686,12 +688,14 @@ body {
 .menu{
   display: none;
 }
-
+canvas{
+  width: 100% !important;
+}
 
 /* ==== resposive design ===== */
 
 
-@media screen and (max-width:1025px) {
+@media screen and (max-width:1236px) {
 .wrap{
   flex-wrap: wrap;
 }
@@ -707,6 +711,9 @@ body {
   margin-top: 32px;
 }
 .recent-transaction-item{
+  width: 100%;
+}
+.analytics-bar-container{
   width: 100%;
 }
 
@@ -748,6 +755,7 @@ body {
   padding: 0 10px;
   top: 0;
   z-index: 10;
+  justify-content: center;
 }
 
 .overview-container,
@@ -814,8 +822,4 @@ body {
   }
 }
 
-@media screen and (min-width: 1236px) {
-  .search-container {
-    width: 60%;
-  }
-}
+
