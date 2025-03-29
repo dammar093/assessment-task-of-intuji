@@ -33,7 +33,7 @@ body {
 
 .sidebar {
   width: 20%;
-  height: 1024px;
+  min-height: 100vh;
   background-color: var(--white);
   z-index: 1;
   display: flex;
@@ -723,7 +723,84 @@ body {
   top: 40px;
   z-index: 10;
 }
+.active-menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background-color: var(--white);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease-in;
+  z-index: 100;
+}
+.notification-message-profile-container {
+  width: 100%;
+  position: fixed;
+  padding: 0 10px;
+  top: 0;
+  z-index: 10;
+}
 
+.overview-container,
+.saving-plan-wrapper,
+.analytics-bar-container,
+.recent-transaction-container {
+  width: 100%;
+  height: fit-content;
+}
+
+.analytics-bar-container {
+  width: 100%;
+}
+
+.overview-items-wrapper {
+  flex-wrap: wrap;
+}
+
+.overview-item-box {
+  width: 100%;
+}
+
+.menu {
+  display: block;
+  padding: 12px;
+}
+
+#menu {
+  float: right;
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 1px 2px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+}
+
+.sidebar-wrapper{
+  margin-top: 8px;
+  height: fit-content;
+}
+.sidebar-container {
+  margin-top: 8px;
+}
+
+.top-sidebar-section {
+  height: fit-content;
+}
+
+.bottom-sidebar-section {
+  height: fit-content;
+}
+}
 @media screen and (min-width: 768px) {
   .search-container {
     width: 80%;
@@ -737,58 +814,4 @@ body {
   .search-container {
     width: 60%;
   }
-}
-.notification-message-profile-container{
-  width: 100%;
-  position: fixed;
-  padding: 0 10px;
-  top: 0;
-  z-index: 10;
-}
-.overview-container, .saving-plan-wrapper, .analytics-bar-container, .recent-transaction-container{
-  width: 100%;
-  height: fit-content;
-}
-.analytics-bar-container{
-  width: 100%;
-}
-.overview-items-wrapper{
-  flex-wrap: wrap;
-}
-.overview-item-box{
-  width: 100%;
-}
-.menu{
-  display: block;
-  padding: 12px;
-}
-
-#menu{
-  float: right;
-  color: var(--primary);
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 1px 2px;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-  outline: none;
-  border: none;
-  border-radius: 2px;
-}
-.active-menu {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 280px;
-  height: 1024px;
-  background-color: var(--white);
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.3s ease-in;
-  z-index: 100;
-}
 }
