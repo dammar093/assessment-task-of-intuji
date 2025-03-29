@@ -413,9 +413,11 @@ body {
   padding: 1rem 0;
   margin: 20px 0;
 }
+
 .progress-container{
   width: 100%;
-  height: 99px;
+  min-height: 99px;
+  min-width: 200px;
 }
 .progress-heading-container{
   width: 100%;
@@ -440,6 +442,7 @@ body {
 }
 .progress-bar-container{
   width: 100%;
+ 
   height: 45px;
   border-radius: 100px;
 }
