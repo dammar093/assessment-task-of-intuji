@@ -39,12 +39,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 .sidebar-container{
   height: 960px;
   width: 100%;
   margin-top: 32px;
   display: flex;
+  position: sticky;
+  left: 0;
+  top: 0;
 }
 .sidebar-wrapper{
   width: 100%;
